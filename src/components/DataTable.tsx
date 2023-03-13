@@ -7,7 +7,7 @@ import { server_calls } from "../api/server";
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 
 const columns: GridColDef[] = [
-    { field: 'id', headerName: 'ID', width: 90, hide: true },
+    { field: 'id', headerName: 'ID', width: 90, hideable: true },
     { field: 'name', headerName: 'Contact Name', flex: 1 },
     { field: 'email', headerName: 'Email', flex: 1 },
     { field: 'phone_number', headerName: 'Phone Number', flex: 1 },
@@ -55,7 +55,12 @@ function DataTable() {
                     rows={contactData} 
                     columns={columns} 
                     initialState={{
-                        pagination: { paginationModel: { pageSize: 10 } }
+                        pagination: { paginationModel: { pageSize: 10 } },
+                        columns: {
+                            columnVisibilityModel: {
+                                id: false
+                            }
+                        }
                     }}
                     pageSizeOptions={[10,20,30]}
                     // rowsPerPageOptions={[5]} 

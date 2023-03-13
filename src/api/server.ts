@@ -1,5 +1,5 @@
 const token = 'f8654ad5c355e458033df0d15c8a3a3f0da6e6def7a62b68'
-const base_url = 'http://prickly-highfalutin-emperor.glitch.me'
+const base_url = 'https://prickly-highfalutin-emperor.glitch.me'
 
 export const server_calls = {
     get: async () => {
